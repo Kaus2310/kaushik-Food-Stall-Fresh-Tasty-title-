@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login or create your Swad Food Stall account.">
+  <title>Login / Sign Up | Swad Food Stall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <header class="navbar">
+    <a class="brand" href="index.html"><span>🍴</span> Swad Food Stall</a>
+    <a href="index.html" class="back-link">← Back to menu</a>
+  </header>
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">🍴</div>
+      <span class="eyebrow">WELCOME</span>
+      <h1 id="authTitle">Login</h1>
+      <p id="authSub">Login to continue your order.</p>
+
+      <div class="tabs">
+        <button class="active" id="loginTab" onclick="showLogin()">Login</button>
+        <button id="signupTab" onclick="showSignup()">Sign Up</button>
+      </div>
+
+      <form id="loginForm" onsubmit="loginUser(event)">
+        <label>Email or mobile</label>
+        <input id="loginId" required placeholder="Enter email or mobile">
+        <label>Password</label>
+        <input id="loginPassword" type="password" required minlength="4" placeholder="Enter password">
+        <button class="primary-btn full" type="submit">Login</button>
+      </form>
+
+      <form id="signupForm" class="hidden" onsubmit="signupUser(event)">
+        <label>Full name</label>
+        <input id="signupName" required placeholder="Your name">
+        <label>Mobile number</label>
+        <input id="signupPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile">
+        <label>Email</label>
+        <input id="signupEmail" type="email" required placeholder="you@example.com">
+        <label>Password</label>
+        <input id="signupPassword" type="password" required minlength="4" placeholder="Create password">
+        <button class="primary-btn full" type="submit">Create Account</button>
+      </form>
+      <p class="small-note">Demo login only: account details are stored locally in this browser.</p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

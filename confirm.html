@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirm your Swad Food Stall takeaway order.">
+  <title>Confirm Order | Swad Food Stall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html"><span>🍴</span> Swad Food Stall</a>
+    <a href="index.html" class="back-link">← Add more items</a>
+  </header>
+
+  <main class="confirm-wrap">
+    <div class="confirm-head">
+      <span class="eyebrow">FINAL STEP</span>
+      <h1>Confirm your order</h1>
+      <p>Check your items and customer details before sending the order on WhatsApp.</p>
+    </div>
+
+    <div class="confirm-grid">
+      <section class="summary-card">
+        <h2>🛒 Order summary</h2>
+        <div id="confirmItems"></div>
+        <div class="total-line"><span>Total</span><strong id="confirmTotal">₹0</strong></div>
+      </section>
+
+      <section class="summary-card">
+        <h2>👤 Customer details</h2>
+        <form onsubmit="confirmOrder(event)">
+          <label>Name</label>
+          <input id="customerName" required placeholder="Your name">
+          <label>Mobile number</label>
+          <input id="customerPhone" required pattern="[0-9]{10}" placeholder="10-digit mobile">
+          <label>Pickup note</label>
+          <textarea id="pickupNote" rows="4" placeholder="Example: Please keep it ready by 5 PM"></textarea>
+          <button class="whatsapp-btn full" type="submit">✓ Confirm & Send on WhatsApp</button>
+        </form>
+        <p class="small-note">After confirmation, WhatsApp will open with your complete order message. You will still need to press Send in WhatsApp.</p>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fresh, tasty and affordable snacks from our local food stall. Order Vada, Idli, Puri Bhaji, Bread Pattis and Kanda Poha.">
+  <meta name="keywords" content="food stall, vada, idli, puri bhaji, bread pattis, kanda poha, takeaway">
+  <meta name="theme-color" content="#ff6b35">
+  <title>Swad Food Stall | Fresh & Tasty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html"><span>🍴</span> Swad Food Stall</a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="auth.html" class="login-link">Login / Sign Up</a>
+      <button class="cart-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">FRESH • HOT • HOMEMADE</span>
+        <h1>Good food.<br><span>Good mood.</span></h1>
+        <p>Fresh Indian snacks prepared with care and served with a smile.</p>
+        <a href="#menu" class="primary-btn">Order Now ↓</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-food">🥘</div>
+        <strong>Today's Special</strong>
+        <span>Fresh • Tasty • Affordable</span>
+      </div>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">OUR MENU</span>
+          <h2>Pick your favourites</h2>
+        </div>
+        <span class="selection-note">Select multiple items at once</span>
+      </div>
+
+      <div class="food-grid">
+        <article class="food-card">
+          <div class="food-img vada">🍩</div>
+          <div class="food-info"><h3>Vada</h3><p>Crispy, hot and delicious.</p><div class="price-row"><b>₹20</b><button onclick="addToCart('Vada',20)">+ Add</button></div></div>
+        </article>
+        <article class="food-card">
+          <div class="food-img idli">🥟</div>
+          <div class="food-info"><h3>Idli</h3><p>Soft and freshly steamed.</p><div class="price-row"><b>₹30</b><button onclick="addToCart('Idli',30)">+ Add</button></div></div>
+        </article>
+        <article class="food-card">
+          <div class="food-img puri">🍛</div>
+          <div class="food-info"><h3>Puri Bhaji</h3><p>Fluffy puri with tasty bhaji.</p><div class="price-row"><b>₹50</b><button onclick="addToCart('Puri Bhaji',50)">+ Add</button></div></div>
+        </article>
+        <article class="food-card">
+          <div class="food-img pattis">🥐</div>
+          <div class="food-info"><h3>Bread Pattis</h3><p>Crunchy outside, delicious inside.</p><div class="price-row"><b>₹30</b><button onclick="addToCart('Bread Pattis',30)">+ Add</button></div></div>
+        </article>
+        <article class="food-card">
+          <div class="food-img poha">🍚</div>
+          <div class="food-info"><h3>Kanda Poha</h3><p>Classic Maharashtrian breakfast.</p><div class="price-row"><b>₹30</b><button onclick="addToCart('Kanda Poha',30)">+ Add</button></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-heading"><div><span class="eyebrow">GALLERY</span><h2>Made fresh, served happy</h2></div></div>
+      <div class="gallery">
+        <div class="gallery-item g1"><span>🍩</span><small>Hot Vada</small></div>
+        <div class="gallery-item g2"><span>🥟</span><small>Soft Idli</small></div>
+        <div class="gallery-item g3"><span>🍛</span><small>Puri Bhaji</small></div>
+        <div class="gallery-item g4"><span>🥐</span><small>Bread Pattis</small></div>
+        <div class="gallery-item g5"><span>🍚</span><small>Kanda Poha</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Swad Food Stall</strong><p>Fresh food • Quick takeaway • Happy customers</p></div>
+    <p>© 2026 Swad Food Stall. All rights reserved.</p>
+  </footer>
+
+  <div id="cartModal" class="modal">
+    <div class="modal-box">
+      <button class="close" onclick="closeCart()">×</button>
+      <span class="eyebrow">YOUR ORDER</span>
+      <h2>Your cart</h2>
+      <div id="cartItems"></div>
+      <div class="total-line"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button class="primary-btn full" onclick="goToCheckout()">Continue to Confirm Order</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
